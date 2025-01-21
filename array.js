@@ -7,6 +7,7 @@ radioButton.addEventListener("click", () => {
 })
 button.addEventListener("click", () => {
     getInfoFromArray();
+playSound("audios/ping01-104055.mp3");
 appInfo.textContent = "nu visas de olika ämnena."
     button.disabled = true;
 
@@ -87,4 +88,9 @@ appInfo.textContent = "tryck på knappen get info igen för att visa alla ämnen
     HTMLA.innerHTML = mapedA.join();
     HTMLA.appendChild(hideCars);
 
+}
+function playSound(file) {
+let audio = new Audio();
+audio.src = file;
+audio.play();
 }
