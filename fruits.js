@@ -12,6 +12,7 @@ button.addEventListener("click", () => {
 
     if (fruit.length > 0) { // Check if the input is not empty
         addFruit(fruit); // Call the function to add the fruit
+        
         alert(`thank you ${name}. The fruit ${fruit} has been added`);
         fruitInputEl.value = ""; // Clear the input field
     } else {
@@ -40,4 +41,10 @@ function addFruit(fruit) {
     li.appendChild(editButton);
     li.appendChild(removeButton); // Add the delete button to the list item
     ul.appendChild(li); // Append the list item to the unordered list
+playSound("/audios/ping01-104055.mp3");
+}
+function playSound(file) {
+let audio = new Audio();
+audio.src = file;
+audio.play();
 }
