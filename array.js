@@ -13,10 +13,11 @@ appInfo.textContent = "nu visas de olika ämnena."
 
 })
 function getInfoFromArray() {
-    const hideButton = document.createElement("button");
+const hideButton = document.createElement("button");
     hideButton.textContent = "hide";
     hideButton.addEventListener("click", () => {
 appInfo.textContent = "tryck på knappen get info igen för att visa alla ämnena"
+playSound("audios/fail-234710.mp3");
         contentEl.innerHTML = "";
         button.disabled = true;
         radioButton.checked = false;
@@ -45,6 +46,8 @@ appInfo.textContent = "tryck på knappen get info igen för att visa alla ämnen
     const hideNumbers = document.createElement("button");
     hideNumbers.textContent = "hide";
     hideNumbers.addEventListener("click", () => {
+        playSound("audios/fail-234710.mp3");
+    appInfo.textContent = "tryck på knappen get info igen för att visa allt innehåll.";
         HTML.innerHTML = "";
         button.disabled = false;
         radioButton.checked = false;
@@ -66,6 +69,8 @@ appInfo.textContent = "tryck på knappen get info igen för att visa alla ämnen
     const hideCars = document.createElement("button");
     hideCars.textContent = "hide";
     hideCars.addEventListener("click", () => {
+        playSound("audios/fail-234710.mp3");
+appInfo.textContent = "tryck på knappen get info igen för att visa allt innehåll.";
         HTMLA.innerHTML = "";
         button.disabled = false;
         radioButton.checked = false;
