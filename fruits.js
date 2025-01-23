@@ -29,6 +29,7 @@ function addFruit(fruit) {
     const removeButton = document.createElement("button");
     removeButton.textContent = "Delete fruit";
     removeButton.addEventListener("click", () => {
+        playSound("audios/fail-234710.mp3");
         alert(`the fruit ${fruit} has been deleted}`);
         ul.removeChild(li); // Remove the list item when the delete button is clicked
     });
