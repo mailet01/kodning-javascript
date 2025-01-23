@@ -7,7 +7,7 @@ button.addEventListener("click", () => {
   const word = wordInputEl.value;  // Capture the input value before clearing it
 
   if(word.length > 2) {
-
+playSound("audios/ping01-104055.mp3");
     console.log(word);
   wordInputEl.value = "";  // Clear the input field
 
@@ -28,6 +28,7 @@ function addWords(word) {
 const removeButton = document.createElement("button");
 removeButton.textContent = "delete word";
 removeButton.addEventListener("click", () => {
+playSound("audios/fail-234710.mp3");
 ul.removeChild(li);
 alert(`the word ${word} has been deleted successfully`)
 })
@@ -40,4 +41,9 @@ li.appendChild(editButton);
 li.appendChild(removeButton);
     ul.appendChild(li);
   }
+}
+function playSound(file) {
+let audio = new Audio();
+audio.src = file;
+audio.play();
 }
