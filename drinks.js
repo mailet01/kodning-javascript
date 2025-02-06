@@ -29,7 +29,7 @@ drinkThree.addEventListener("click", () => {
 
 
 sendButton.addEventListener("click", () => {
-    playSound("audios/ping01-104055.mp3");
+    
     const drinkA = drinkOne.value;
     const drinkB = drinkTwo.value;
     const drinkC = drinkThree.value;
@@ -49,6 +49,7 @@ sendButton.addEventListener("click", () => {
         alert(`Thank you ${name}. You have chosen ${drinkC}.`);
         
     }
+    
 })
 function playSound(file) {
 let audio = new Audio();
