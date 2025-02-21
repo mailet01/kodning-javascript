@@ -7,17 +7,17 @@ radioButton.addEventListener("click", () => {
 })
 button.addEventListener("click", () => {
     getInfoFromArray();
-playSound("audios/ping01-104055.mp3");
-appInfo.textContent = "nu visas de olika ämnena."
+    playSound("audios/ping01-104055.mp3");
+    appInfo.textContent = "nu visas de olika ämnena."
     button.disabled = true;
 
 })
 function getInfoFromArray() {
-const hideButton = document.createElement("button");
+    const hideButton = document.createElement("button");
     hideButton.textContent = "hide";
     hideButton.addEventListener("click", () => {
-appInfo.textContent = "tryck på knappen get info igen för att visa alla ämnena"
-playSound("audios/fail-234710.mp3");
+        appInfo.textContent = "tryck på knappen get info igen för att visa alla ämnena"
+        playSound("audios/fail-234710.mp3");
         contentEl.innerHTML = "";
         button.disabled = true;
         radioButton.checked = false;
@@ -47,7 +47,7 @@ playSound("audios/fail-234710.mp3");
     hideNumbers.textContent = "hide";
     hideNumbers.addEventListener("click", () => {
         playSound("audios/fail-234710.mp3");
-    appInfo.textContent = "tryck på knappen get info igen för att visa allt innehåll.";
+        appInfo.textContent = "tryck på knappen get info igen för att visa allt innehåll.";
         HTML.innerHTML = "";
         button.disabled = false;
         radioButton.checked = false;
@@ -70,7 +70,7 @@ playSound("audios/fail-234710.mp3");
     hideCars.textContent = "hide";
     hideCars.addEventListener("click", () => {
         playSound("audios/fail-234710.mp3");
-appInfo.textContent = "tryck på knappen get info igen för att visa allt innehåll.";
+        appInfo.textContent = "tryck på knappen get info igen för att visa allt innehåll.";
         HTMLA.innerHTML = "";
         button.disabled = false;
         radioButton.checked = false;
@@ -95,7 +95,7 @@ appInfo.textContent = "tryck på knappen get info igen för att visa allt inneh�
 
 }
 function playSound(file) {
-let audio = new Audio();
-audio.src = file;
-audio.play();
+    let audio = new Audio();
+    audio.src = file;
+    audio.play();
 }
