@@ -1,3 +1,4 @@
+
 const selectAllAnimals = document.getElementById("allChecked");
 const animal1 = document.getElementById("hund");
 const animal2 = document.getElementById("katt");
@@ -32,6 +33,7 @@ const animalC = animal3.value;
 const name = nameInputEl.value;
 if(selectAllAnimals.checked) {
 alert(`Thank you ${name}. You have chosen ${animalA}, ${animalB} och ${animalC}.`);
+
 }
 if(animal1.checked) {
 alert(`Thank you ${name}. You have chosen ${animalA}.`);
