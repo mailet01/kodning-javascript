@@ -1,11 +1,11 @@
 const wordInputEl = document.getElementById("wordInput");
-
+const nameInputEl = document.getElementById("nameInput")
 const ul = document.getElementById("words");
 const button = document.getElementById("addButton");
 
 button.addEventListener("click", () => {
   const word = wordInputEl.value;  // Capture the input value before clearing it
-
+const name = nameInputEl.value;
   if(word.length > 2) {
 playSound("audios/ping01-104055.mp3");
     console.log(word);
@@ -14,9 +14,13 @@ playSound("audios/ping01-104055.mp3");
   addWords(word);  // Pass the captured word to the addWords function
   
   alert(`thank you. The word ${word} has been added.`);
+
   } else {
 alert("you have to write at least 2 characters.");
   }
+if(`${word}${name}`.length = 0) {
+alert("oops! No empty fields")  
+}
 
 
 });
